@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CAKE SHOP </title>
+<link rel="stylesheet" type="text/css" href="./style.css">
+<style>
+  /* Style for the horizontal menu bar */
+  .a{
+    background-color: rgba(240, 248, 255, 0.37);
+  }
+  ul.menu-bar {
+         list-style: none;
+         padding: 0;
+         margin: 20px;
+         background-color: #9400d467;
+         text-align: center;
+     }
+
+     ul.menu-bar li {
+         display: inline-block;
+         margin-right: 20px;
+     }
+
+     ul.menu-bar li:last-child {
+         margin-right: 0;
+     }
+
+     ul.menu-bar li a {
+         color: #fff;
+         text-decoration: none;
+         padding: 20px 30px; /* Increased padding for height */
+         border-radius: 10px;
+         line-height: 40px; /* Increased line height for vertical alignment */
+     }
+
+     ul.menu-bar li a:hover {
+      background-color: #3b014f;
+     }
+</style>
+</head>
+<body bgcolor="#F5FSDC">
+<h1>CHOCO NUGGET DELIGHTS!</h1>
+<center><h2>welcomes you all to the cake carousel</h2></center>
+<nav>
+  <ul class="menu-bar">
+      <li><a href="./index.html">About Us</a></li>
+      <li><a href="./top.html">Top Notches</a></li>
+      <li><a href="./hot.html">Hot Sellings</a></li>
+      <li><a href="./order">Order Details</a></li>
+  </ul>
+</nav>
+<br>
+
+  
+  <form action="" onsubmit="return validateForm()">
+    <fieldset>
+    <legend><h2>melting ice</h2></legend>
+    <label>Choose your favorite:</label><br>
+    <input type="checkbox" id="pistachio" name="Pistachio" value="Pistachio">
+    <label for="pistachio">Pistachio</label><br>
+    <input type="checkbox" id="butter" name="Butter" value="Butter">
+    <label for="butter">Butter</label><br><br>
+    <input type="submit" value="Submit">
+    </fieldset><br>
+    <label for="Comment">Comment</label><br>
+    <textarea name="Comment" id="Comment" placeholder="Hello" cols="45" rows="7"></textarea><br>
+    <h3>ORDER DETAILS</h3><br>
+    <h4>First name:</h4><br>
+    <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
+    <h4>Last name:</h4><br>
+    <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+    <h4>Phone number:</h4><br>
+    <input type="text" id="number" name="number" placeholder="Phone Number"><br><br>
+    <h4>Password:</h4><br>
+    <input type="password" id="password" name="password" placeholder="Password"><br><br>
+    <h4>Email:</h4><br>
+    <input type="email" id="email" name="email" placeholder="Email"><br><br>
+    <h4>Gender:</h4><br>
+    <input type="radio" name="Gender" id="male" value="Male">
+    <label for="male">MALE</label><br>
+    <input type="radio" name="Gender" id="female" value="Female">
+    <label for="female">FEMALE</label><br><br>
+    <label for="State">STATE</label>
+    <select style="width: 50%;" name="State" id="State">
+      <option value="Tamilnadu">Tamilnadu</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Karnataka">Karnataka</option>
+    </select><br><br>
+    <input type="submit" value="Submit">
+    </form>
+    <script>
+      function validateForm() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var number = document.getElementById("number").value;
+        var password = document.getElementById("password").value;
+        var email = document.getElementById("email").value;
+      
+        if (fname === "" || lname === "" || number === "" || password === "" || email === "") {
+          alert("All fields must be filled out");
+          return false;
+        }
+      
+        if (!/^\d{10}$/.test(number)) {
+          alert("Phone number must be a 10-digit number");
+          return false;
+        }
+      
+        return true;
+      }
+      </script>
+</body>
+</html>
